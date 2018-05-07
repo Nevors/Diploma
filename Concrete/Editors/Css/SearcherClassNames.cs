@@ -1,7 +1,8 @@
-public class SearcherClassName{
+public class SearcherClassNames{
     private Dictionary<string,int> freqList;
     public void Search(IParseTree tree,Dictionary<string,int> freqList){
         this.freqList = freqList;
+        new Visitor().Visit(tree);
     }
 
     class Visitor: CssBaseVisitor<object>{
